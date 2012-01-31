@@ -1,0 +1,12 @@
+<%= form_for(@type_of_area) do |f| %>
+
+  <fieldset class="form-stacked">
+    <legend>Add type of area</legend>
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+  </fieldset>
+
+  <%= f.submit "Add", :class => "btn primary" %>
+<% end %>
+
+<%= TypeOfArea.all %>

@@ -18,7 +18,7 @@ end
 
 group :development do
   gem 'rspec-rails'
-  gem 'annotate'
+  gem 'annotate', :git => 'git://github.com/jeremyolliver/annotate_models.git', :branch => 'rake_compatibility'
 end
 
 group :test do
@@ -26,7 +26,7 @@ group :test do
   gem 'spork'
   gem 'webrat'
   gem 'autotest'
-  gem 'annotate'
+  gem 'factory_girl_rails', '1.0'
 end
 
 gem 'jquery-rails'

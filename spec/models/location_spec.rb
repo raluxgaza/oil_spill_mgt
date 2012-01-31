@@ -74,3 +74,19 @@ describe Location do
 
   end
 end
+
+# == Schema Information
+#
+# Table name: locations
+#
+#  id               :integer(4)      not null, primary key
+#  created_at       :datetime
+#  updated_at       :datetime
+#  name             :string(255)
+#  fountain_id      :string(255)
+#  quantity_spilled :string(255)
+#  type_of_area_id  :integer(4)
+#  cause_id         :integer(4)
+#  status_id        :integer(4)
+#
+

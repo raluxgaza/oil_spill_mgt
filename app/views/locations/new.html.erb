@@ -1,0 +1,28 @@
+
+<%= form_for(@location) do |f| %>
+  <fieldset class="form-stacked">
+    <legend>Add new spill location</legend>
+    <%= f.label :fountain_id, "Fountain Id:", :class => "span5" %>
+    <%= f.text_field :fountain_id %>
+
+    <%= f.label :name %>
+    <%= f.text_area :name, :class => "span5", :cols => "30", :rows => "3" %>
+
+    <%= f.label :quantity_spilled %>
+    <%= f.text_field :quantity_spilled %>
+
+    <%= f.label :type_of_area %>
+    <%= collection_select :location, :type_of_area_id, TypeOfArea.all, :id, :name, :prompt => true %>
+    <%= link_to "Add new area", new_type_of_area_path %>
+
+    <%= f.label :cause %>
+    <%= f.text_field :cause %>
+    <%= link_to "Add new cause", "#" %>
+
+    <%= f.label :status %>
+    <%= f.text_field :status %>
+    <%= link_to "Add new status", "#" %>
+  </fieldset>
+
+  <%= f.submit "Add location", :class => "btn primary" %>
+<% end %>
