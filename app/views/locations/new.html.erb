@@ -16,12 +16,12 @@
     <%= link_to "Add new area", new_type_of_area_path %>
 
     <%= f.label :cause %>
-    <%= f.text_field :cause %>
-    <%= link_to "Add new cause", "#" %>
+    <%= collection_select :location, :cause_id, Cause.all, :id, :name, :prompt => true %>
+    <%= link_to "Add new cause", new_cause_path %>
 
     <%= f.label :status %>
-    <%= f.text_field :status %>
-    <%= link_to "Add new status", "#" %>
+    <%= collection_select :location, :status_id, Status.all, :id, :name, :prompt => true %>
+    <%= link_to "Add new status", new_status_path %>
   </fieldset>
 
   <%= f.submit "Add location", :class => "btn primary" %>

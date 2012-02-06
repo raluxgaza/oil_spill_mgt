@@ -8,7 +8,7 @@ class TypeOfAreasController < ApplicationController
   def create
     @type_of_area = TypeOfArea.new(params[:type_of_area])
     if @type_of_area.save
-      redirect_to root
+      redirect_to new_location_path
     else
       @title = "Add new area"
       render 'new'

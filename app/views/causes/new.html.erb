@@ -1,0 +1,9 @@
+<%= form_for(@cause) do |f| %>
+  <fieldset class="form-stacked">
+    <legend>Add an oil spill cause</legend>
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+  </fieldset>
+
+  <%= f.submit "Add", :class => "btn primary" %>
+<% end %>

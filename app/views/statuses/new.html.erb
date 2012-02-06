@@ -1,0 +1,10 @@
+<%= form_for(@status) do |f| %>
+
+  <fieldset class="form-stacked">
+    <legend>Add a new status</legend>
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+  </fieldset>
+
+  <%= f.submit "Add", :class => "btn primary" %>
+<% end %>
