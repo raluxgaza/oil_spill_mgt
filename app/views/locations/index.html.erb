@@ -1,0 +1,14 @@
+<h1>All locations</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Quantity Spilled</th>
+  </tr>
+  <% @locations.each do |f| %>
+    <tr>
+      <td><%= f.name %></td>
+      <td><%= f.quantity_spilled %></td>
+    </tr>
+  <% end %>
+</table>

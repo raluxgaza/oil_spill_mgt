@@ -5,14 +5,7 @@ describe LocationsController do
 
   before(:each) do
     @title = "Enter a new location"
-    @attr = {
-      :fountain_id => "2001_123",
-      :name => "Blah Blah",
-      :quantity_spilled => "343.23",
-      :type_of_area_id => 2,
-      :cause_id => 2,
-      :status_id => 3
-    }
+    @attr = Factory(:location)
   end
 
   describe "GET 'new'" do
@@ -34,8 +27,47 @@ describe LocationsController do
 
       it "should create a location" do
         lambda do
-          post :create, :location => @attr
+          post :create, :location => @attr.attributes
         end.should change(Location, :count).by(1)
+      end
+    end
+
+    describe "failure" do
+      @attr = {
+        :name => "",
+        :fountain_id => "",
+        :quantity_spilled => "",
+        :type_of_area_id => "",
+        :cause_id => "",
+        :status_id => ""
+      }
+    end
+  end
+
+  describe "GET 'index'" do
+
+    before(:each) do
+      second = Factory(:location, :name => "Oil shell pipeline")
+
+      30.times do
+        Factory(:location, :name => Factory.next(:name))
+      end
+    end
+
+    it "should be successful" do
+      get :index
+      response.should be_success
+    end
+
+    it "should have the right title" do
+      get :index
+      response.should have_selector('title', :content => "All locations")
+    end
+
+    it "should return a list of existing locations" do
+      get :index
+      Location.all.each do |location|
+        response.should have_selector('td', :content => location.name)
       end
     end
   end
@@ -58,3 +90,4 @@ describe LocationsController do
     end
   end
 end
+

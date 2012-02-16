@@ -26,7 +26,7 @@ group :test do
   gem 'spork'
   gem 'webrat'
   gem 'autotest'
-  #gem 'factory_girl_rails', '1.0'
+  gem 'factory_girl_rails', '1.0'
 end
 
 gem 'jquery-rails'
