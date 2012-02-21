@@ -64,6 +64,7 @@ describe LocationsController do
       response.should have_selector('title', :content => "All locations")
     end
 
+    # index test.
     it "should return a list of existing locations" do
       get :index
       Location.all.each do |location|
