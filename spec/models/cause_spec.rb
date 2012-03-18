@@ -6,7 +6,7 @@ describe Cause do
     @attr = { :name => "PVS" }
   end
 
-  it "should create and instance given valid attributes" do
+  it "should create an instance given valid attributes" do
     Cause.create!(@attr)
   end
 

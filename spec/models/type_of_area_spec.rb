@@ -21,6 +21,10 @@ describe TypeOfArea do
       location_type = TypeOfArea.new(@attr)
       location_type.should respond_to(:location)
     end
+
+    it "should belong to extra_information" do
+      TypeOfArea.new(@attr).should respond_to(:extra_information)
+    end
   end
 end
 

@@ -2,6 +2,7 @@ class TypeOfArea < ActiveRecord::Base
   validates :name, :presence => true
   
   belongs_to :location
+  belongs_to :extra_information
 end
 
 # == Schema Information

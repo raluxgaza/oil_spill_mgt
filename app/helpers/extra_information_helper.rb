@@ -1,0 +1,2 @@
+module ExtraInformationHelper
+end
