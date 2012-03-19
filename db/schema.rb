@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120318100843) do
+ActiveRecord::Schema.define(:version => 20120319131811) do
 
   create_table "causes", :force => true do |t|
     t.datetime "created_at"
@@ -45,6 +45,15 @@ ActiveRecord::Schema.define(:version => 20120318100843) do
     t.string   "depth_of_water"
     t.integer  "soil_type_id"
     t.string   "notes"
+    t.integer  "technical_risk_ranking_id"
+    t.string   "intensity_volume_spill"
+    t.string   "likelihood_of_impact"
+    t.string   "potential_for_loss_of_life"
+    t.string   "long_term_impact"
+    t.string   "existing_high_reputation_area"
+    t.string   "facility_with_flare_point"
+    t.string   "use_govt_forces"
+    t.string   "site_prioritisation_rank"
   end
 
   create_table "level_of_impacts", :force => true do |t|
@@ -73,6 +82,12 @@ ActiveRecord::Schema.define(:version => 20120318100843) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "name"
+  end
+
+  create_table "technical_risk_rankings", :force => true do |t|
+    t.string   "name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "type_of_areas", :force => true do |t|

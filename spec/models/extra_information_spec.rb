@@ -45,6 +45,14 @@ describe ExtraInformation do
     it "should have a soil_type_id" do
       ExtraInformation.new(@attr).should respond_to(:soil_type_id)
     end
+
+    it "should have a technical_risk_ranking" do
+      ExtraInformation.new(@attr).should respond_to(:technical_risk_ranking)
+    end
+
+    it "should have a technical_risk_ranking_id" do
+      ExtraInformation.new(@attr).should respond_to(:technical_risk_ranking_id)
+    end
   end
 
   describe "Columns in table" do
@@ -100,6 +108,38 @@ describe ExtraInformation do
 
     it "should have a notes field" do
       ExtraInformation.new(@attr).should respond_to(:notes)
+    end
+
+    it "should have a intensity_volume_spill field" do
+      ExtraInformation.new(@attr).should respond_to(:intensity_volume_spill)
+    end
+
+    it "should have likelihood_of_impact field" do
+      ExtraInformation.new(@attr).should respond_to(:likelihood_of_impact)
+    end
+
+    it "should have a potential_for_loss_of_life field" do
+      ExtraInformation.new(@attr).should respond_to(:potential_for_loss_of_life)
+    end
+
+    it "should have a long_term_impact field" do
+      ExtraInformation.new(@attr).should respond_to(:long_term_impact)
+    end
+
+    it "should have a existing_high_reputation_area field" do
+      ExtraInformation.new(@attr).should respond_to(:existing_high_reputation_area)
+    end
+
+    it "should have a facility_with_flare_point field" do
+      ExtraInformation.new(@attr).should respond_to(:facility_with_flare_point)
+    end
+
+    it "should have a use_govt_forces field" do
+      ExtraInformation.new(@attr).should respond_to(:use_govt_forces)
+    end
+
+    it "should have a site_prioritisation_rank field" do
+      ExtraInformation.new(@attr).should respond_to(:site_prioritisation_rank)
     end
   end
 end
