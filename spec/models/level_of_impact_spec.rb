@@ -16,3 +16,13 @@ describe LevelOfImpact do
     end
   end
 end
+
+# == Schema Information
+#
+# Table name: level_of_impacts
+#
+#  id         :integer(4)      not null, primary key
+#  created_at :datetime
+#  updated_at :datetime
+#
+

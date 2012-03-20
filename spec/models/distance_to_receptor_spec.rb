@@ -20,3 +20,14 @@ describe DistanceToReceptor do
     DistanceToReceptor.new(@attr).should respond_to(:name)
   end
 end
+
+# == Schema Information
+#
+# Table name: distance_to_receptors
+#
+#  id         :integer(4)      not null, primary key
+#  created_at :datetime
+#  updated_at :datetime
+#  name       :string(255)
+#
+
